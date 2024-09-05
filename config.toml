@@ -1,0 +1,56 @@
+baseURL = 'https://narrowtheme.netlify.app/'
+languageCode = 'en-us'
+title = 'Narrow Theme'
+theme = 'narrow' 
+disqusShortname = 'w1-yoga'
+enableRobotsTXT = true
+googleAnalytics = 'G-C9YCJVRM7P'
+paginate = 12
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+[params]
+author = 'John Doe'
+description = "lorem ipsum description"
+favicon = "🔴"
+aurl = "images/jokervsbat.jpg"
+firstname = "Narrow"
+lastname = " Theme"
+color = "purple"
+border = "purple-700"
+
+[params.links]
+# samplelink = "https://test.com"
+facebook = "https://www.facebook.com"
+youtube = "https://www.youtube.com"
+twitter = "https://www.twitter.com"
+instagram = "https://www.instagram.com"
+#  vimeo = "https://www.vimeo.com"
+
+[params.footer]
+footer_t1 = "Lorem Ipsum"
+footer_t2 = "Lorem Ipsum"
+footer_t3 = "Lorem Ipsum"
+
+footer_d1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+footer_d2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+footer_d3 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+[params.form]
+gform_link = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf83RMt0b2mULBIxTextDSPaHHWBxMBBzh70nfVMIagdeqsRQ/formResponse"
+entry_name = "entry.778463083"
+entry_email = "entry.450580326"
+entry_message = "entry.175795079"
+
+
+[params.instagram]
+appId = "807217793288387"
+clientToken = "04b754f3a7c7e614d0537d6713ba9a3a"
+
+
+

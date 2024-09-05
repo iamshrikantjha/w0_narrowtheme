@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{- partial "head.html" . -}}
+  <body class="bg-white">
+    {{- partialCached "header.html" . -}}
+    <div id="content">
+      <!-- GOOGLE TRANSLATE STARTS -->
+      <div class="w-full">
+        <div class="w-full md:w-7/12 px-4 md:px-0 mt-4 -mb-4 mx-auto">
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+      <!-- GOOGLE TRANSLATE ENDS -->
+
+      {{- block "main" . }}{{- end }}
+      
+    </div>
+    {{- partialCached "footer.html" . -}}
+  </body>
+</html>

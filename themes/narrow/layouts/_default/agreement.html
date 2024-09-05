@@ -1,0 +1,174 @@
+{{ define "main" }}
+
+<!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL STARTS -->
+<!-- Overlay  -->
+<div class="w-full flex flex-row items-center justify-center pt-6">
+  <div class="w-11/12 md:w-7/12 mx-auto">
+    <!-- Title  -->
+    <!-- <div class="text-3xl uppercase font-bold text-black">{{ .Title }}</div> -->
+
+    {{ partial "tags.html" . }}
+
+  </div>
+</div>
+<!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL ENDS -->
+
+<!-- EXPERIMENT
+  {{ range first 3 .Site.Taxonomies.tags.popular }}
+    <div>{{ .Params.cover }}</div>
+  {{ end }} -->
+
+<!-- MAIN GIANT COLUMN STARTS -->
+<div class="w-full bg-green- my-10">
+  <div class="
+      w-full
+      md:w-10/12
+      lg:w-7/12
+      mx-auto
+      bg-red-
+      flex flex-col
+      md:flex-row
+    ">
+    <!-- LEFT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-8/12 bg-blue- md:mr-10">
+      {{ partial "breadcrumbs.html" . }}
+      <!-- LATEST NEWS START -->
+      <!-- BLOCK  -->
+      <div class="p-4 md:p-0 mb-0 md:mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            <!-- Latest News -->
+            {{ .Title }}
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <!-- Content  -->
+        <div class="flex flex-col md:flex-row flex-wrap">
+          <!-- CONTACT FORM RENDERING STARTS -->
+          <div class="w-full flex flex-1">
+            {{ partial "agreement.html" . }}
+          </div>
+          <!-- CONTACT FORM RENDERING ENDS -->
+        </div>
+      </div>
+      <!-- LATEST NEWS ENDS -->
+
+      <!-- GOOGLE TRANSLATE STARTS -->
+      <div class="w-full px-4 inline-block mx-auto">
+        <div id="google_translate_element"></div>
+      </div>
+      <!-- GOOGLE TRANSLATE ENDS -->
+    </div>
+
+    <!-- RIGHT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-4/12 bg-yellow-">
+      <!-- ***STAY CONNECTED STARTS -->
+      {{ partial "stay_connected.html" . }}
+      <!-- ***STAY CONNECTED ENDS -->
+
+      <div class="w-full py-6">
+        <img loading="lazy" class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg" />
+      </div>
+
+      <!-- ***MAKE IT MODERN STARTS -->
+      {{ partial "all_blocks/modern.html" . }}
+
+      <!-- ***MAKE IT MODERN ENDS -->
+
+      <div class="w-full py-6">
+        <img loading="lazy" class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg" />
+      </div>
+
+      <!-- ***MOST POPULAR STARTS -->
+      <div class="p-4 md:p-0 mb-6">
+        <SubHeading text="most popular" color="black" />
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Most Popular
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <div class="py-4">
+          {{ with .Site.Taxonomies.tags.trend }}
+          {{ range first 5 . }}
+
+          <a class="flex flex-row px-0 md:px-2 pt-5" href="{{ .RelPermalink }}">
+            <!-- Image  -->
+            <div class="w-4/12">
+              <img loading="lazy" class="h-20 object-cover w-full" src="{{ .Params.cover }}" />
+            </div>
+            <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+              <div class="font-medium text-black">
+                <!-- Spring Fashion Show at the University of Michigan Has Started -->
+                {{ .Title }}
+              </div>
+              <div class="text-gray-400 text-xs-s">
+                {{ .Date | time.Format ":date_long" }}
+              </div>
+            </div>
+          </a>
+          {{ end }}
+          {{ end }}
+
+        </div>
+        <!-- ***MOST POPULAR ENDS -->
+
+        <!-- <RecentComments /> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MAIN GIANT COLUMN ENDS -->
+{{ end }}

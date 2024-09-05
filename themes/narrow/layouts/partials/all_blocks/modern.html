@@ -1,0 +1,71 @@
+<div class="p-4 md:p-0 mb-6">
+  <!-- SUBHEADING STARTS -->
+  <!-- Heading -->
+  <div class="
+        border-b-2 border-{{ $.Site.Params.border }}
+        flex flex-row
+        justify-between
+        items-center
+      ">
+    <div class="
+          bg-{{ $.Site.Params.border }}
+          inline-block
+          uppercase
+          text-sm
+          py-1.5
+          px-2
+          text-white
+        ">
+      Make it modern
+    </div>
+    <div class="flex flex-row">
+      <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+            <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+            <div class="text-gray-400 text-xs mr-6">Vouge</div>
+            <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+            <div class="text-gray-400 text-xs mr-6">Travel</div>
+            <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+            <div class="text-gray-400 text-xs mr-6">More</div> -->
+    </div>
+  </div>
+  <!-- SUBHEADING ENDS -->
+
+  <div class="flex flex-col md:flex-row flex-wrap pt-5">
+    {{ if .Site.Taxonomies.tags.popular }}
+    {{ range first 3 .Site.Taxonomies.tags.popular }}
+    <a class="w-full md:w-1/2 p-2.5" href="{{ .RelPermalink }}">
+      <div class="">
+        <div class="relative">
+          <img loading="lazy" class="w-full object-cover h-44 md:h-24" src="{{ .Params.cover }}" />
+          <div class="
+                absolute
+                bottom-0
+                left-0
+                bg-{{ $.Site.Params.border }}
+                text-white text-xs-s
+                py-1
+                px-1.5
+                capitalize
+              ">
+            <!-- New Looks Starts-->
+            {{ if (not (isset .Params "categories")) }}
+            <!-- New Looks -->
+            {{ else }}
+            <div>{{ index .Params.categories 0 }}</div>
+            {{ end }}
+            <!-- New Looks Ends-->
+          </div>
+        </div>
+        <div class="text-sm pt-2 font-medium text-black">
+          <!-- Urban Kitchen with Granite Tops, Exposed Bulb Lights and
+              Island -->
+          {{ .Title | truncate 40 }}
+        </div>
+      </div>
+    </a>
+    {{ end }}
+    {{ else }}
+    <p>No popular tags found.</p>
+    {{ end }}
+  </div>
+</div>

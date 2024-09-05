@@ -1,0 +1,63 @@
+<div class="p-4 md:p-0 mb-6">
+    <!-- SUBHEADING STARTS -->
+    <!-- Heading -->
+    <div
+      class="
+        border-b-2 border-{{ $.Site.Params.border }}
+        flex flex-row
+        justify-between
+        items-center
+      "
+    >
+      <div
+        class="
+          bg-{{ $.Site.Params.border }}
+          inline-block
+          uppercase
+          text-sm
+          py-1.5
+          px-2
+          text-white
+        "
+      >
+        Most Popular
+      </div>
+      <div class="flex flex-row">
+        <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+            <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+            <div class="text-gray-400 text-xs mr-6">Vouge</div>
+            <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+            <div class="text-gray-400 text-xs mr-6">Travel</div>
+            <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+            <div class="text-gray-400 text-xs mr-6">More</div> -->
+      </div>
+    </div>
+    <!-- SUBHEADING ENDS -->
+
+    <div class="py-4">
+      {{ with .Site.Taxonomies.tags.trend }}
+          {{ range first 5 . }}
+
+      <a class="flex flex-row px-5 md:px-2 pt-5" href="{{ .RelPermalink }}">
+        <!-- Image  -->
+        <div class="w-4/12">
+          <img loading="lazy" src="{{ .Params.cover }}" />
+        </div>
+        <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+          <div class="font-medium text-black">
+            <!-- Spring Fashion Show at the University of Michigan Has Started -->
+            {{ .Title }}
+          </div>
+          <div class="text-gray-400 text-xs-s">
+            {{ .Date | time.Format ":date_long" }}
+          </div>
+        </div>
+      </a>
+      {{ end }}
+      {{ end }}
+
+    </div>
+    <!-- ***MOST POPULAR ENDS -->
+
+    <!-- <RecentComments /> -->
+  </div>

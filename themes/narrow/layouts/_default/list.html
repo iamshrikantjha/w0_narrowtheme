@@ -1,0 +1,278 @@
+{{ define "main" }}
+
+<!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL STARTS -->
+<!-- Overlay  -->
+<div class="w-full flex flex-row items-center justify-center pt-6">
+  <div class="w-11/12 md:w-7/12 mx-auto">
+    <!-- Title  -->
+    <div class="text-3xl uppercase font-bold text-black">{{ .Title  | truncate 60 }}</div>
+
+    {{ partial "tags.html" . }}
+  </div>
+</div>
+<!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL ENDS -->
+
+
+
+<!-- MAIN GIANT COLUMN STARTS -->
+<div class="w-full bg-green- my-10">
+  <div
+    class="
+      w-full
+      md:w-10/12
+      lg:w-7/12
+      mx-auto
+      bg-red-
+      flex flex-col
+      md:flex-row
+    "
+  >
+    <!-- LEFT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-8/12 bg-blue- md:mr-10">
+      {{ partial "breadcrumbs.html" . }}
+
+      <!-- LATEST NEWS START -->
+      <!-- BLOCK  -->
+      <div class="p-4 md:p-0 mb-0 md:mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div
+          class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          "
+        >
+          <div
+            class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            "
+          >
+            <!-- Latest News -->
+            {{ .Title  | truncate 60 }}
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <!-- Content  -->
+        <ul class="flex flex-row flex-wrap pb-5" id="myList">
+          <!-- FOR TAGS -->
+          {{ if eq .Permalink "/tags/" }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+          {{ range .Pages }}
+          <li class="mt-5 p-1 md:pr-8">
+            <!-- Tags  -->
+            <div class="">
+              <a
+                href="{{ .RelPermalink }}"
+                class='
+                bg-purple-600
+                py-1.5
+                px-2.5
+                my-1.5
+                cursor-pointer
+                uppercase
+                text-white text-xs
+                tracking-wider
+                mr-3'
+              >
+                {{ .Title  | truncate 60 }}
+              </a>
+            </div>
+          </li>
+          
+          {{ end }}
+
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+
+          <!-- FOR CATEGORIES -->
+          {{ if eq .Permalink "/categories/" }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+          {{ range .Pages }}
+
+          <li class="mt-5 p-1 md:pr-4">
+            <!-- Tags  -->
+            <div class="">
+              <a
+                href="{{ .RelPermalink }}"
+                class='
+                bg-purple-600
+                py-1.5
+                px-2.5
+                my-1.5
+                cursor-pointer
+                uppercase
+                text-white text-xs
+                tracking-wider
+                mr-3'
+              >
+                {{ .Title  | truncate 60 }}
+              </a>
+            </div>
+          </li>
+          {{ end }}
+
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+
+          <!-- NOT FOR TAGS & CATEGORIES STARTS -->
+          {{ if not (eq .Permalink "/tags/" | or (eq .Permalink "/categories/")) }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+          {{ range .Paginator.Pages }}
+          <div class="w-full md:w-1/2 p-1 md:pr-8 py-5">
+            <!-- BLOCK 5 STARTS -->
+            <a class="bg-red- cursor-pointer" href="{{ .RelPermalink }}">
+              <div class="relative">
+                {{ if (not (isset .Params "cover")) }}
+                <img loading="lazy"
+                  class="h-44 object-cover w-full bg-red-"
+                  src="https://i.pinimg.com/736x/85/4c/5f/854c5faa090384be75bd8a3570b16cfb.jpg"
+                />
+                {{ else }}
+                <img loading="lazy"
+                  class="h-44 object-cover w-full bg-red-"
+                  src="{{ .Params.cover }}"
+                />
+
+                {{ end }}
+                <div
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    bg-{{ $.Site.Params.border }}
+                    text-white text-xs-s
+                    py-1
+                    px-1.5
+                    uppercase
+                  "
+                >
+                  <!-- New Looks Starts-->
+                  {{ if (not (isset .Params "categories")) }}
+                  <!-- New Looks -->
+                  {{ else }}
+                  <div>{{ index .Params.categories 0 }}</div>
+                  {{ end }}
+                  <!-- New Looks Ends-->
+                </div>
+              </div>
+              <div class="text-lg pt-2 font-medium text-black">
+                <!-- Urban Kitchen with Granite Tops, Exposed Bulb Lights and Island -->
+                {{ .Title  | truncate 60 }}
+              </div>
+
+              <!-- Author + Date  -->
+              <div class="flex flex-row pt-3">
+                <!-- Author  -->
+                <div class="text-xs-s font-bold">
+                  <!-- God Of Thunder -->
+                  <!-- {{ $.Site.Params.author }} -->
+                  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+                  {{- if $author -}}
+                      {{ $author.name }}
+                  {{- end -}}
+                </div>
+                <!-- Date  -->
+                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+            </a>
+            <!-- BLOCK 5 ENDS -->
+          </div>
+          {{ end }}
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+          <!-- NOT FOR POSTS & CATEGORIES ENDS -->
+        </ul>
+        {{partial "pagination.html" .}} 
+
+        <!-- <div
+          class="
+            px-2
+            py-2
+            bg-{{ $.Site.Params.border }}
+            text-white
+            inline-block
+            text-sm
+            cursor-pointer
+          "
+          id="loadMore"
+        >
+          Load more ?
+        </div>
+        <br />
+        <div
+          class="
+            px-2
+            py-1.5
+            my-3
+            bg-red-600
+            text-white
+            inline-block
+            text-sm
+            cursor-pointer
+          "
+          id="showLess"
+        >
+          Show less
+        </div> -->
+      </div>
+      <!-- LATEST NEWS ENDS -->
+
+      <!-- GOOGLE TRANSLATE STARTS -->
+      <div class="w-full px-4 md:px-0 inline-block mx-auto bg-red-300">
+        <div id="google_translate_element"></div>
+      </div>
+      <!-- GOOGLE TRANSLATE ENDS -->
+    </div>
+
+    <!-- RIGHT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-4/12 bg-yellow-">
+      {{ partial "stay_connected.html" . }}
+
+      <div class="w-full py-6">
+        <img loading="lazy"
+          class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg"
+        />
+      </div>
+
+      <!-- ***MAKE IT MODERN STARTS -->
+      {{ partial "all_blocks/modern.html" . }}
+
+      <!-- ***MAKE IT MODERN ENDS -->
+
+      <div class="w-full py-6">
+        <img loading="lazy"
+          class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg"
+        />
+      </div>
+
+      <!-- ***MOST POPULAR STARTS -->
+      {{ partial "all_blocks/popular.html" . }}
+      <!-- ***MOST POPULAR ENDS -->
+
+    </div>
+  </div>
+</div>
+<!-- MAIN GIANT COLUMN ENDS -->
+{{ end }}

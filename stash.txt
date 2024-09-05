@@ -1,0 +1,553 @@
+
+<!-- TRENDING NOW STARTS -->
+<div class="w-full bg-green-">
+    <div class="
+      w-full
+      md:w-10/12
+      lg:w-7/12
+      bg-red-
+      mx-auto
+      flex flex-row
+      p-2
+      md:p-6
+      items-center
+    ">
+        <!-- BLOCK  -->
+        <div class="
+        uppercase
+        text-xs-s
+        md:text-xs
+        bg-black
+        text-white
+        p-1.5
+        font-medium
+        tracking-wide
+      ">
+            Trending Now
+        </div>
+        <!-- NEWS TEXT  -->
+        <div class="px-5 italic text-sm">
+            lorem ipsum shit lorem ipsum shit lorem ipsum shit lorem ipsum shit
+        </div>
+    </div>
+</div>
+<!-- TRENDING NOW ENDS -->
+
+
+
+<!-- Description  -->
+<div class="italic text-black my-6 inline-block">
+Custom category description. You must learn one thing. The world was
+made to be free in. Give up all the other worlds Except the one in
+which you belong. Custom category description. You must learn one
+thing. The world was made to be free in.
+</div>
+<!-- Description  -->
+
+ <div class="w-full md:w-1/2 p-1 md:pr-10 py-5">
+                        <!-- BLOCK 5 STARTS -->
+                        <div class="bg-red- cursor-pointer">
+                            <div class="relative">
+                                <img loading="lazy"
+                                    src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                                <div class="
+                    absolute
+                    bottom-0
+                    left-0
+                    bg-black
+                    text-white text-xs-s
+                    py-1
+                    px-1.5
+                  ">
+                                    New Looks
+                                </div>
+                            </div>
+                            <div class="text-lg pt-2 font-medium text-black">
+                                Urban Kitchen with Granite Tops, Exposed Bulb Lights and
+                                Island
+                            </div>
+
+                            <!-- Author + Date  -->
+                            <div class="flex flex-row pt-3">
+                                <!-- Author  -->
+                                <div class="text-xs-s font-bold">God Of Thunder</div>
+                                <!-- Date  -->
+                                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                                    August 7, 2021
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BLOCK 5 ENDS -->
+                    </div>
+
+
+ <!-- BLOCK 2 STARTS -->
+            <div class="flex flex-row px-5 md:px-2 pt-5">
+              <!-- Image -->
+              <div class="w-4/12">
+                <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/8-696x464.jpg" />
+              </div>
+              <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+                <div class="font-medium text-black">
+                  Spring Fashion Show at the University of Michigan Has
+                  Started
+                </div>
+                <div class="text-gray-400 text-xs-s">August 7, 2019</div>
+              </div>
+            </div>
+            <!-- BLOCK 2 ENDS -->
+
+
+
+
+        <!-- RELATED ARTICLES STARTS -->
+        <div class="p-4 md:p-0 mb-6">
+          <!-- Heading -->
+          <div class="
+                border-b-2 border-black
+                flex flex-row
+                justify-between
+                items-center
+              ">
+            <div class="
+                  bg-black
+                  inline-block
+                  uppercase
+                  text-sm
+                  py-1.5
+                  px-2
+                  text-white
+                ">
+              Related Articles
+            </div>
+            <div class="flex flex-row">
+              <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row justify-between">
+            <!-- BLOCK 5 STARTS -->
+            <div class="p-4">
+              <div class="bg-red- cursor-pointer">
+                <div class="relative">
+                  <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                  <div class="
+                        absolute
+                        bottom-0
+                        left-0
+                        bg-black
+                        text-white text-xs-s
+                        py-1
+                        px-1.5
+                      ">
+                    New Looks
+                  </div>
+                </div>
+                <div class="text-sm pt-2 font-medium text-black">
+                  Urban Kitchen with Granite Tops, Exposed Bulb Lights and
+                  Island
+                </div>
+
+                <!-- Author + Date  -->
+                <div class="flex flex-row pt-3">
+                  <!-- Author  -->
+                  <div class="text-xs-s font-bold">God Of Thunder</div>
+                  <!-- Date  -->
+                  <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                    August 7, 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- BLOCK 5 ENDS -->
+
+            <!-- BLOCK 5 STARTS -->
+            <div class="p-4">
+              <div class="bg-red- cursor-pointer">
+                <div class="relative">
+                  <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                  <div class="
+                        absolute
+                        bottom-0
+                        left-0
+                        bg-black
+                        text-white text-xs-s
+                        py-1
+                        px-1.5
+                      ">
+                    New Looks
+                  </div>
+                </div>
+                <div class="text-sm pt-2 font-medium text-black">
+                  Urban Kitchen with Granite Tops, Exposed Bulb Lights and
+                  Island
+                </div>
+
+                <!-- Author + Date  -->
+                <div class="flex flex-row pt-3">
+                  <!-- Author  -->
+                  <div class="text-xs-s font-bold">God Of Thunder</div>
+                  <!-- Date  -->
+                  <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                    August 7, 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- BLOCK 5 ENDS -->
+
+            <!-- BLOCK 5 STARTS -->
+            <div class="p-4">
+              <div class="bg-red- cursor-pointer">
+                <div class="relative">
+                  <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                  <div class="
+                        absolute
+                        bottom-0
+                        left-0
+                        bg-black
+                        text-white text-xs-s
+                        py-1
+                        px-1.5
+                      ">
+                    New Looks
+                  </div>
+                </div>
+                <div class="text-sm pt-2 font-medium text-black">
+                  Urban Kitchen with Granite Tops, Exposed Bulb Lights and
+                  Island
+                </div>
+
+                <!-- Author + Date  -->
+                <div class="flex flex-row pt-3">
+                  <!-- Author  -->
+                  <div class="text-xs-s font-bold">God Of Thunder</div>
+                  <!-- Date  -->
+                  <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                    August 7, 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- BLOCK 5 ENDS -->
+          </div>
+        </div>
+        <!-- RELATED ARTICLES ENDS -->
+
+
+{{ $pages := where .Site.RegularPages
+          "CurrentSection.Title" .CurrentSection.Title }} {{ range first 3 (after 3 $pages) }}
+          <!-- BLOCK 2 STARTS -->
+          <div class="flex flex-row px-5 md:px-2 pt-5">
+            <!-- Image -->
+            <div class="w-4/12">
+              <img loading="lazy" src="{{ .Params.cover }}" />
+            </div>
+            <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+              <div class="font-medium text-black">
+                <!-- Spring Fashion Show at the University of Michigan Has Started -->
+                {{ .Title }}
+              </div>
+              <div class="text-gray-400 text-xs-s">
+                {{ .Date | time.Format ":date_long" }}
+              </div>
+            </div>
+          </div>
+          <!-- BLOCK 2 ENDS -->
+          {{ end }}
+
+
+
+          
+ <!-- BLOCK 2 STARTS -->
+          <div class="flex flex-row px-5 md:px-2 pt-5">
+            <!-- Image -->
+            <div class="w-4/12">
+              <img loading="lazy"
+                src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/8-696x464.jpg"
+              />
+            </div>
+            <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+              <div class="font-medium text-black">
+                Spring Fashion Show at the University of Michigan Has Started
+              </div>
+              <div class="text-gray-400 text-xs-s">August 7, 2019</div>
+            </div>
+          </div>
+          <!-- BLOCK 2 ENDS -->
+
+
+    <!-- USEFUL PREVIOUS NEXT STARTS       -->
+
+    {{ if or .Next .Prev }}
+    <div class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center">Read next</h2>
+
+        <div class="row">
+          <div class="col-md-6 text-center">
+            {{ if .Prev }} Previous Post:
+            <a href="{{ .Prev.URL | relURL}}"
+              >{{ .Prev.Title | markdownify }}</a
+            >
+            {{ end }}
+          </div>
+          <div class="col-md-6 text-center">
+            {{ if .Next }} Next Post:
+            <a href="{{ .Next.URL | relURL }}"
+              >{{ .Next.Title | markdownify }}</a
+            >
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+    <!-- USEFUL PREVIOUS NEXT ENDS       -->
+
+
+<!-- BLOCK 4 STARTS -->
+                <div class="flex flex-col md:flex-row px-2 md:px-0 pt-5 md:py-6">
+                    <!-- Image  -->
+                    <div class="w-full md:w-4/12">
+                        <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/97-696x464.jpg" />
+                    </div>
+
+                    <!-- Details  -->
+                    <div class="
+              w-full
+              md:w-8/12
+              text-xl
+              px-0
+              md:px-5
+              py-6
+              md:py-0
+              flex flex-col
+              justify-between
+            ">
+                        <div class="font-medium text-black cursor-pointer">
+                            KTM Marchetti Signs with Larranaga and Zanotti for Next Season
+                            <!-- Author + Date  -->
+                            <div class="flex flex-row">
+                                <!-- Author  -->
+                                <div class="text-xs-s font-bold">God Of Thunder</div>
+                                <!-- Date  -->
+                                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                                    August 7, 2021
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description  -->
+                        <div class="text-gray-600 text-xs">
+                            We woke reasonably late following the feast and free flowing
+                            wine the night before. After gathering ourselves and our
+                            packs, we headed down to our homestay family’s small dining...
+                        </div>
+                    </div>
+                </div>
+                <!-- BLOCK 4 ENDS -->
+
+
+
+THE BLOCK BELOW IS USED IN CATEGORY LISTING IN LIST.HTML SECTION
+ <!-- BLOCK 5 STARTS -->
+              <a class="bg-red- cursor-pointer"  href= "{{ .RelPermalink }}">
+                <div class="relative">
+                  <img loading="lazy"  class="h-44 object-cover w-full bg-red-600" src="https://img.freepik.com/free-vector/alone-concept-illustration_114360-2548.jpg?size=338&ext=jpg" />
+                  <div class="absolute bottom-0 left-0 bg-black text-white text-xs-s py-1 px-1.5">
+                     <!-- New Looks Starts-->
+                   {{ if (not (isset .Params "categories")) }}
+                   <!-- New Looks -->
+                     {{ else }}
+                     <div>
+                 {{ index .Params.categories 0 }}
+               </div>
+                 {{ end }}
+                 <!-- New Looks Ends-->
+                  </div>
+                </div>
+                <div class="text-lg pt-2 font-medium text-black">
+                  <!-- Urban Kitchen with Granite Tops, Exposed Bulb Lights and Island -->
+                  {{ .Title }}
+                </div>
+
+                <!-- Author + Date  -->
+                <div class="flex flex-row  pt-3">
+                  <!-- Author  -->
+                  <div class="text-xs-s font-bold">
+                    <!-- God Of Thunder -->
+                    {{ $.Site.Params.author }}
+                  </div>
+                  <!-- Date  -->
+                  <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                    August 7, 2021
+                  </div>
+                </div>
+              </a>
+              <!-- BLOCK 5 ENDS -->
+
+
+
+RANDOM COLOR GENERATOR BUG FOR WHITE
+bg-{{ delimit ( first 1 (shuffle (slice "red" "yellow" "purple" "blue" "black" "teal"))) "" }}-600 inline-block
+
+
+
+
+
+
+
+PAGINATOR GOOD ONE STARTS
+
+
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
+        {{ range $paginator.Pages }}
+        <ul class="flex flex-row flex-wrap pb-5 bg-green-300">
+          <!-- FOR TAGS -->
+          {{ if eq .URL "/tags/" }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+          <li class="mt-5 p-1 md:pr-8">
+            <!-- Tags  -->
+            <div class="">
+              <a
+                href="{{ .RelPermalink }}"
+                class='
+                bg-purple-600
+                py-1.5
+                px-2.5
+                my-1.5
+                cursor-pointer
+                uppercase
+                text-white text-xs
+                tracking-wider
+                mr-3'
+              >
+                {{ .Title }}
+              </a>
+            </div>
+          </li>
+          
+
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+
+          <!-- FOR CATEGORIES -->
+          {{ if eq .URL "/categories/" }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+
+          <li class="mt-5 p-1 md:pr-4">
+            <!-- Tags  -->
+            <div class="">
+              <a
+                href="{{ .RelPermalink }}"
+                class='
+                bg-purple-600
+                py-1.5
+                px-2.5
+                my-1.5
+                cursor-pointer
+                uppercase
+                text-white text-xs
+                tracking-wider
+                mr-3'
+              >
+                {{ .Title }}
+              </a>
+            </div>
+          </li>
+
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+
+          <!-- NOT FOR TAGS & CATEGORIES STARTS -->
+          {{ if not (eq .URL "/tags/" | or (eq .URL "/categories/")) }}
+          <!-- STANDARD LIST BLOCK STARTS -->
+          <li class="w-full md:w-1/2 p-1 md:pr-8 py-5 bg-red-300">
+            <!-- BLOCK 5 STARTS -->
+            <a class="bg-red- cursor-pointer" href="{{ .RelPermalink }}">
+              <div class="relative">
+                {{ if (not (isset .Params "cover")) }}
+                <img loading="lazy"
+                  class="h-44 object-cover w-full bg-red-"
+                  src="https://i.pinimg.com/736x/85/4c/5f/854c5faa090384be75bd8a3570b16cfb.jpg"
+                />
+                {{ else }}
+                <img loading="lazy"
+                  class="h-44 object-cover w-full bg-red-"
+                  src="{{ .Params.cover }}"
+                />
+
+                {{ end }}
+                <div
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    bg-black
+                    text-white text-xs-s
+                    py-1
+                    px-1.5
+                    uppercase
+                  "
+                >
+                  <!-- New Looks Starts-->
+                  {{ if (not (isset .Params "categories")) }}
+                  <!-- New Looks -->
+                  {{ else }}
+                  <div>{{ index .Params.categories 0 }}</div>
+                  {{ end }}
+                  <!-- New Looks Ends-->
+                </div>
+              </div>
+              <div class="text-lg pt-2 font-medium text-black">
+                <!-- Urban Kitchen with Granite Tops, Exposed Bulb Lights and Island -->
+                {{ .Title }}
+              </div>
+
+              <!-- Author + Date  -->
+              <div class="flex flex-row pt-3">
+                <!-- Author  -->
+                <div class="text-xs-s font-bold">
+                  <!-- God Of Thunder -->
+                  <!-- {{ $.Site.Params.author }} -->
+                  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+                  {{- if $author -}}
+                      {{ $author.name }}
+                  {{- end -}}
+                </div>
+                <!-- Date  -->
+                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+            </a>
+            <!-- BLOCK 5 ENDS -->
+          </li>
+          <!-- STANDARD LIST BLOCK ENDS -->
+          {{ end }}
+          <!-- NOT FOR POSTS & CATEGORIES ENDS -->
+        </ul>
+        {{ end }}
+        <!-- Hugo's default pagination template. -->
+        {{ template "_internal/pagination.html" . }}
+
+
+
+
+
+
+PAGINATOR GOOD ONE ENDS
+
+
+
+<!-- EXPERIMENT
+  {{ range first 3 .Site.Taxonomies.tags.popular }}
+    <div>{{ .Params.cover }}</div>
+  {{ end }} -->

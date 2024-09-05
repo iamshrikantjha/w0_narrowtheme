@@ -1,0 +1,429 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="robots" content="index,follow" /> 
+  <meta name="googlebot" content="index,follow" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{ else }}🔴{{ end }}</text></svg>"
+  />
+
+  {{ template "_internal/google_analytics.html" . }}
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1122880117675915" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9H8CMRJBT"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-F9H8CMRJBT');
+  </script>
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'">
+
+  <meta
+    name="og:description"
+    content="{{ if .Params.desc }}{{ .Params.desc }}{{ else }}{{ $.Site.Params.description }}{{ end }}"
+  />
+  <meta
+    name="description"
+    content="{{ if .Params.desc }}{{ .Params.desc }}{{ else }}{{ $.Site.Params.description }}{{ end }}"
+  />
+
+  <meta
+    property="og:image" itemprop="image" 
+    content="{{ if .Params.cover }}{{ .Params.cover | absURL }}{{ else }}{{ $.Site.Params.aurl  | absURL }}{{ end }}"
+  />
+  <meta
+    property="image"
+    content="{{ if .Params.cover }}{{ .Params.cover | absURL }}{{ else }}{{ $.Site.Params.aurl | absURL }}{{ end }}"
+  />
+
+  <!-- <meta property="og:image:type" content="image/jpeg" /> -->
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="banner" />
+    <meta property="image:width" content="400" />
+    <meta property="image:height" content="300" />
+    <meta property="image:alt" content="banner" />
+
+  <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ end }}" />
+  <meta property="title" content="{{ if .Title }}{{ .Title }}{{ end }}" />
+
+  <meta name="theme-color" content="{{ $.Site.Params.color }}" />
+  
+  <!-- FONTAWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+
+  <!-- TAILWIND CSS -->
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- From UNPKG -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/base.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/components.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/utilities.min.css"
+  />
+
+  <!-- INFINITE SCROLL -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="./../../static/css/style.css" /> -->
+  <!-- <link rel="stylesheet" href="./css/debug.css"> -->
+
+  <style>
+    /* FONT */
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+    @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro");
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700;900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700;900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+    /* ./src/index.css */
+    /* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+    * {
+      /* font-family: "Montserrat", sans-serif; */
+      /* font-family: "Roboto", sans-serif; */
+      font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+      /* font-family: 'Lato', sans-serif; */
+      /* font-family: 'Source Sans Pro', sans-serif; */
+      /* font-size: 96%; */
+    }
+
+    body {
+    font-size: calc(0.5em + 1vw);
+}
+
+    .poof {
+      all: unset;
+    }
+
+    .cf {
+      /* font-family: "Roboto", sans-serif; */
+      font-family: "Montserrat", sans-serif;
+    }
+
+    img {
+      border-radius: 7px;
+    }
+
+    .gel {
+      font-family: "Gelasio", serif;
+    }
+
+    .rob {
+      font-family: "Roboto", sans-serif;
+    }
+
+    html {
+      /* overflow: scroll;
+      overflow-x: hidden; */
+    }
+
+    ::-webkit-scrollbar {
+      /* width: 0px;
+      background: transparent; */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      /* background: #ff0000; */
+    }
+
+    .text-xs-s {
+      font-size: x-small;
+    }
+
+    .link {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      padding: 2em;
+      margin: -2em;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      background-color: #f1f1f1;
+    }
+
+    /* MOBILE TOP NAVBAR */
+
+    /* Mobile Version */
+
+    .navigation-menu {
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    /* Hiding the main navigation until it is clicked */
+
+    .main-navigation {
+      display: none;
+      padding-left: 0px;
+    }
+
+    .main-navigation a:hover {
+      color: black;
+      transition: 0.3s ease;
+    }
+
+    .hamburger-icon {
+      margin: 5px 30px 5px 5px;
+      cursor: pointer;
+      font-size: 25px;
+      color: #947aff;
+    }
+
+    /* Hiding the checkbox */
+
+    #menu-toggle {
+      display: none;
+    }
+
+    /* When the checkbox is ticked, the main navigation will display */
+
+    #menu-toggle:checked + .main-navigation {
+      display: block;
+    }
+
+    /* Desktop Version */
+
+    @media screen and (min-width: 505px) {
+      .navigation-menu {
+        /* height: 70px; */
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e7e7e7;
+      }
+
+      .main-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-left: 30px;
+      }
+
+      .main-navigation a {
+        padding: 15px 17px;
+      }
+
+      /* Hiding the hamburger icon on larger screens */
+
+      .hamburger-icon {
+        display: none;
+      }
+
+      /* Ensuring that if the hamburger menu is active but
+  the screen becomes larger, the display will 
+  change to display items in a row instead of a column*/
+
+      #menu-toggle:checked + .main-navigation {
+        display: flex;
+      }
+    }
+
+    /* PAGINATION STYLE STARTS */
+    body {
+      color: #212121;
+      background: #fafafa;
+      font: normal 16px/1.5 "Open Sans", Helvetica, sans-serif;
+    }
+
+    /* h2 {
+      font-weight: 500;
+      padding: 0 15px;
+
+      span {
+        color: red;
+      }
+    } */
+
+    /*************************************************/
+    /* USE THE FOLLOWING CSS TO STYLE YOUR PAGINATOR */
+    /*************************************************/
+    .pagination {
+      display: flex;
+      list-style: none;
+      border-radius: 0.25rem;
+      /* margin: 20px 0; */
+      padding: 0;
+      justify-content: center;
+    }
+
+    .page-link {
+      position: relative;
+      display: block;
+      padding: 0.75rem 1rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: #007bff;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+    }
+
+    .homepage .page-link,
+    .listing .page-link {
+      background-color: #fff;
+    }
+
+    .page-item.disabled .page-link {
+      color: #6c757d;
+      pointer-events: none;
+      cursor: auto;
+      background-color: #fff;
+      border-color: #dee2e6;
+    }
+
+    .page-item.active .page-link {
+      z-index: 1;
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    /* PAGINATION STYLE ENDS */
+
+    #myList li {
+      display: none;
+    }
+
+    /* #loadMore {
+    color:green;
+    cursor:pointer;
+}
+#loadMore:hover {
+    color:black;
+}
+#showLess {
+    color:red;
+    cursor:pointer;
+    display:none;
+}
+#showLess:hover {
+    color:black;
+} */
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    .goog-logo-link {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+
+      /* NO SELECT */
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+
+      /* BLUE FLASH */
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* loader ellips in separate pen CSS */
+
+    /* MARKDOWN SPECIAL STARTS */
+    .table-wrapper {
+      overflow-x: scroll;
+    }
+    /* MARKDOWN SPECIAL ENDS */
+
+    /*======================
+    404 page
+=======================*/
+
+    .page_404 {
+      padding: 40px 0;
+      background: #fff;
+      font-family: "Arvo", serif;
+    }
+
+    .page_404 img {
+      width: 100%;
+    }
+
+    .four_zero_four_bg {
+      background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+      height: 400px;
+      background-position: center;
+    }
+
+    .four_zero_four_bg h1 {
+      font-size: 80px;
+    }
+
+    .four_zero_four_bg h3 {
+      font-size: 80px;
+    }
+
+    .link_404 {
+      color: #fff !important;
+      padding: 10px 20px;
+      background: #39ac31;
+      margin: 20px 0;
+      display: inline-block;
+    }
+    .contant_box_404 {
+      margin-top: -50px;
+    }
+    /* 404 ENDS HERE */
+
+
+    
+  </style>
+  <title>
+    {{ if .Title }} {{ .Title }} | {{ else }} Home | {{ end }} {{ .Site.Title }}
+  </title>
+  <!-- <title>Newspaper X | The Best</title> -->
+  {{ partial "schema.html" . }}
+</head>

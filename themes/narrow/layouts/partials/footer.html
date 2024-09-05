@@ -1,0 +1,391 @@
+<footer>
+  <!-- NEW FOOTER STARTS -->
+  <div class="w-full bg-black py-9">
+    <!-- UPPER DIV -->
+    <div
+      class="
+        w-9/12
+        bg-black
+        mx-auto
+        flex flex-col
+        md:flex-row
+        justify-between
+        border-b-2 border-black
+        pb-9
+      "
+    >
+      <!-- Block 1 -->
+      <div class="flex-1 pr-0 md:pr-7">
+        <div class="text-white text-xl font-xl mt-3">{{ $.Site.Params.footer.footer_t1 }}</div>
+        <div class="text-white text-xs md:text-sm my-3 mr-5">
+          {{ $.Site.Params.footer.footer_d1 }}
+        </div>
+      </div>
+      <!-- Block 2 -->
+      <div class="flex-1 pr-0 md:pr-7">
+        <div class="text-white text-xl font-xl mt-3">{{ $.Site.Params.footer.footer_t2 }}</div>
+        <div class="text-white text-xs md:text-sm my-3 mr-5">
+          {{ $.Site.Params.footer.footer_d2 }}
+        </div>
+      </div>
+      <!-- Block 3 -->
+      <div class="flex-1 pr-0 md:pr-7">
+        <div class="text-white text-xl font-xl mt-3">
+          {{ $.Site.Params.footer.footer_t3 }}
+        </div>
+        <div class="text-white text-xs md:text-sm my-3 mr-5">
+          {{ $.Site.Params.footer.footer_d3 }}
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="
+        w-9/12
+        bg-black
+        mx-auto
+        flex flex-row
+        justify-between
+        mb-16
+        md:mb-0
+      "
+    >
+      <!-- Left -->
+      <div class="w-6/12 md:w-2/12">
+        <div
+          class="
+            text-4xl md:text-5xl text-white
+            gel
+            font-semibold
+            uppercase
+            tracking-widest
+          "
+        >
+          {{ $.Site.Params.firstname }} <span class="text-{{ $.Site.Params.color }}-700 gel">{{if .Site.Params.lastname}}{{ $.Site.Params.lastname }}{{end}}</span>
+          <!-- 🔮 -->
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="text-white">
+        <!-- About -->
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW FOOTER ENDS -->
+  <!-- FOOTER STARTS -->
+  <div class="w-full bg-black hidden md:block">
+    <div class="w-full md:w-9/12 mx-auto">
+      <div class="flex flex-row justify-between py-2">
+        <!-- Left  -->
+        <div class="flex flex-row items-center">
+          <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            © Newspaper Hugo Theme by Rasputin
+          </div>
+        </div>
+
+        <!-- Center -->
+        <div class="flex flex-row items-center">
+          <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            Made in India by Rasputin ❤️
+          </div>
+        </div>
+
+        <!-- Right  -->
+        <div class="flex flex-row items-center">
+          <a href="{{ "/disclaimer" | relURL }}" class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            Disclaimer
+          </a>
+          <a href="{{ "/privacy" | relURL }}" class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            Privacy
+          </a>
+          <a href="{{ "/agreement" | relURL }}" class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            Terms and Conditions
+          </a>
+          <a href="{{ "/contact" | relURL }}" class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER ENDS -->
+
+  <!-- SCROLL TO TOP STARTS -->
+  <div class="fixed bottom-0 right-0">
+    <div
+      onclick="topFunction()"
+      class="
+        bg-black
+        w-10
+        h-10
+        rounded-full
+        md:rounded-none md:w-12 md:h-12
+        flex flex-row
+        justify-center
+        items-center
+        m-6
+        mb-16
+        md:mb-6
+        cursor-pointer
+        opacity-90
+      "
+    >
+      <i class="fas text-white fa-angle-up text-2xl md:text-4xl"></i>
+    </div>
+  </div>
+  <!-- SCROLL TO TOP ENDS -->
+
+  <script
+    type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  ></script>
+  <script>
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      window.scroll({ top: 0, behavior: "smooth" });
+    }
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    function myFunction() {
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    // SCROLL TO TOP ENDS HERE
+
+    // VIEW MORE POSTS ENDS
+    $(document).ready(function () {
+      size_li = $("#myList li").size();
+      x = 10;
+      $("#myList li:lt(" + x + ")").show();
+      $("#loadMore").click(function () {
+        x = x + 5 <= size_li ? x + 5 : size_li;
+        $("#myList li:lt(" + x + ")").show();
+        $("#showLess").show();
+        if (x == size_li) {
+          $("#loadMore").hide();
+        }
+      });
+      $("#showLess").click(function () {
+        x = x - 5 < 0 ? 3 : x - 5;
+        $("#myList li")
+          .not(":lt(" + x + ")")
+          .hide();
+        $("#loadMore").show();
+        $("#showLess").show();
+        if (x == 3) {
+          $("#showLess").hide();
+        }
+      });
+    });
+    // VIEW MORE POSTS ENDS
+
+    // GET CURRENT DATE STARTS
+    var dt = new Date();
+    document.getElementById("date-time").innerHTML = dt;
+    // GET CURRENT DATE ENDS
+
+    // GOOGLE TRANSLATE STARTS
+    // function setCookie(key, value, expiry) {
+    //   var expires = new Date();
+    //   expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
+    //   document.cookie = key + "=" + value + ";expires=" + expires.toUTCString();
+    // }
+
+    function googleTranslateElementInit() {
+      // setCookie('googtrans', '/en/hi',1);
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+      // GOOGLE TRANSLATE ENDS
+
+      // DISABLE CTRL STARTS
+      document.onkeydown = function (e) {
+        if (
+          e.ctrlKey &&
+          (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)
+        ) {
+          return false;
+        } else {
+          return true;
+        }
+      };
+      $(document).keypress("u", function (e) {
+        if (e.ctrlKey) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      $(document).keypress("i", function (e) {
+        if (e.ctrlKey) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      $(document).keypress("c", function (e) {
+        if (e.ctrlKey) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      $(document).keypress("shift", function (e) {
+        if (e.ctrlKey) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+
+      // DISABLE CTRL ENDS
+    }
+  </script>
+
+
+  <!-- NEW DISABLE COPY STARTS -->
+  <script id="wpcp_disable_selection" type="text/javascript">
+    //<![CDATA[
+    var image_save_msg='You Can Not Save images!';
+    var no_menu_msg='Context Menu disabled!';
+    var smessage = "Content is protected !!";
+    function disableEnterKey(e)
+    {
+      if (e.ctrlKey){
+         var key;
+         if(window.event)
+              key = window.event.keyCode;     //IE
+         else
+              key = e.which;     //firefox (97)
+        //if (key != 17) alert(key);
+         if (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43)
+         {
+              show_wpcp_message('You are not allowed to copy content or view source');
+              return false;
+         }else
+           return true;
+         }
+    }
+    function disable_copy(e)
+    {  
+      var elemtype = e.target.nodeName;
+      var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+      elemtype = elemtype.toUpperCase();
+      var checker_IMG = '';
+      if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+      if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+      {
+        if (smessage !== "" && e.detail == 2)
+          show_wpcp_message(smessage);
+        
+        if (isSafari)
+          return true;
+        else
+          return false;
+      }  
+    }
+    function disable_copy_ie()
+    {
+      var elemtype = window.event.srcElement.nodeName;
+      elemtype = elemtype.toUpperCase();
+      if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+      if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+      {
+        //alert(navigator.userAgent.indexOf('MSIE'));
+          //if (smessage !== "") show_wpcp_message(smessage);
+        return false;
+      }
+    }  
+    function reEnable()
+    {
+      return true;
+    }
+    document.onkeydown = disableEnterKey;
+    document.onselectstart = disable_copy_ie;
+    if(navigator.userAgent.indexOf('MSIE')==-1)
+    {
+      document.onmousedown = disable_copy;
+      document.onclick = reEnable;
+    }
+    function disableSelection(target)
+    {
+        //For IE This code will work
+        if (typeof target.onselectstart!="undefined")
+        target.onselectstart = disable_copy_ie;
+        
+        //For Firefox This code will work
+        else if (typeof target.style.MozUserSelect!="undefined")
+        {target.style.MozUserSelect="none";}
+        
+        //All other  (ie: Opera) This code will work
+        else
+        target.onmousedown=function(){return false}
+        target.style.cursor = "default";
+    }
+    //Calling the JS function directly just after body load
+    window.onload = function(){disableSelection(document.body);};
+    //]]>
+    </script>
+    <script id="wpcp_disable_Right_Click" type="text/javascript">
+      //<![CDATA[
+      document.ondragstart = function() { return false;}
+      /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      Disable context menu on images by GreenLava Version 1.0
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+          function nocontext(e) {
+             return false;
+          }
+          document.oncontextmenu = nocontext;
+      //]]>
+    </script>
+    <style>
+    .unselectable
+    {
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    cursor: default;
+    }
+    html
+    {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    </style>
+    <script id="wpcp_css_disable_selection" type="text/javascript">
+    var e = document.getElementsByTagName('body')[0];
+    if(e)
+    {
+      e.setAttribute('unselectable',on);
+    }
+    </script>
+  <!-- NEW DISABLE COPY ENDS -->
+
+
+
+
+
+
+
+
+
+
+</footer>

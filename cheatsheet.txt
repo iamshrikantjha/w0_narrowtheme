@@ -1,0 +1,50 @@
+
+
+
+*****LATEST COMMANDS FOR NEW PROJECT******
+1. create hugo project by hugo new site quickstart
+2. add theme="narrow"
+3. add important data from hugo.toml (previously config.toml)
+4. add authors in data folder + add files in content + take care of static folder as well then follow the steps for exisiting projects
+
+
+*****LATEST COMMANDS FOR EXISTING PROJECT******
+1. hugo server OR hugo server -D --bind 192.168.29.223 --baseUrl http://192.168.29.223 [use ifconfig command IP:1313]
+2. hugo new posts/news/category/post-name.md
+3. check vs code for article 
+4. edit article 
+5. check article on chrome http://localhost:1313/
+6. publish article on github desktop.
+
+
+
+
+
+*****LATEST TAGS******
+1. popular
+2. editor
+3. nomiss
+4. recent
+
+
+
+******HOW TO WRITE BLOG******
+
+1. Headings
+# heading 1
+## heading 2
+### heading 3
+#### heading 4
+##### heading 5
+###### heading 6
+
+2. Youtube Video
+## Youtube Shortcode
+
+{{< youtube CFEkjzf8DAA >}}
+
+3. Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Elon Image](/images/elon_musk/1.jpeg)

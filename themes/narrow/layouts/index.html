@@ -1,0 +1,533 @@
+{{ define "main" }}
+<!-- TOP CATEGORIES -->
+
+<!-- 
+Popular - popular - tag5
+Trending Now - trend - tag4
+Latest - latest - tag3
+Editor - editor - tag2
+Don't Miss - nomiss - tag1
+-->
+
+<!-- MAIN GIANT COLUMN STARTS -->
+<div class="w-full bg-green- my-10">
+  <div class="
+      w-full
+      md:w-10/12
+      lg:w-7/12
+      mx-auto
+      bg-red-
+      flex flex-col
+      md:flex-row
+    ">
+
+    <!-- LEFT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-8/12 bg-blue- md:mr-10">
+      <!-- ***DONT MISS STARTS -->
+      <!-- Tags  -->
+      <div class="flex flex-row flex-wrap block md:hidden ml-4">
+        {{ partial "tags.html" }}
+      </div>
+      <!-- BLOCK  -->
+      <div class="p-4 md:p-0 mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Popular
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+            <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+            <div class="text-gray-400 text-xs mr-6">Vouge</div>
+            <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+            <div class="text-gray-400 text-xs mr-6">Travel</div>
+            <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+            <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <div class="flex flex-col md:flex-row py-0 md:py-1.5 bg-red-">
+          <!-- Inner Left  -->
+          <div class="w-full">
+            <!-- BLOCK 1 STARTS -->
+            {{ if .Site.Taxonomies.tags.popular }}
+            {{ range first 1 .Site.Taxonomies.tags.popular }}
+            <a class="px-3" href="{{ .RelPermalink }}">
+              <!-- Image  -->
+              <div class="relative">
+                <img loading="lazy" class="h-52 w-full object-cover" src="{{ .Params.cover }}" />
+                <div class="
+                    absolute
+                    bottom-0
+                    left-0
+                    bg-{{ $.Site.Params.border }}
+                    text-white text-xs-s
+                    py-1
+                    px-1.5
+                    capitalize
+                  ">
+                  <!--  New Looks Starts-->
+                  {{ if (not (isset .Params "categories")) }}
+                  <!-- New Looks  -->
+                  {{ else }}
+                  <div>{{ index .Params.categories 0 }}</div>
+                  {{ end }}
+                  <!-- New Looks Ends-->
+                </div>
+              </div>
+              <!-- Text  -->
+              <div class="text-xl py-2.5">
+                <!-- Top Fashion Trends to Look for in Every Important Collection -->
+                {{ .Title }}
+              </div>
+              <!-- Author + Date  -->
+              <div class="flex flex-row">
+                <!-- Author  -->
+                <div class="text-xs-s font-bold">
+                  <!-- God Of Thunder -->
+                  <!-- {{ $.Site.Params.author }} -->
+                  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+                  {{- if $author -}}
+                  {{ $author.name }}
+                  {{- end -}}
+                </div>
+                <!-- Date  -->
+                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+
+              <!-- Description  -->
+              <div class="text-sm py-2">
+                <!-- Occaecat qui excepteur id consectetur nostrud commodo ad commodo
+                sit ipsum. Tempor magna ut mollit cupidatat occaecat laboris
+                incididunt -->
+                {{ .Params.desc | truncate 250 }}
+              </div>
+            </a>
+            {{ end }}
+            {{ else }}
+            <p>No popular tags found.</p>
+            {{ end }}
+            <!-- BLOCK 1 ENDS -->
+
+            <Block1 />
+          </div>
+          <!-- Inner Right  -->
+          <div class="w-full bg-red-">
+            {{ if .Site.Taxonomies.tags.popular }}
+            {{ $tags := after 1 .Site.Taxonomies.tags.popular }}
+            {{ if gt (len $tags) 0 }}
+            {{ range first 4 $tags }}
+            <!-- BLOCK 2 STARTS -->
+            <a class="flex flex-row ml-0 md:ml-3 md:px-2 pt-6 cursor-pointer" href="{{ .RelPermalink }}">
+              <!-- Image -->
+              <div class="w-4/12">
+                {{ if (isset .Params "cover") }}
+                <img loading="lazy" class="h-20 w-full object-cover" src="{{ .Params.cover }}" />
+                {{ else }}
+                <img loading="lazy" class="h-20 w-full object-cover" src="https://via.placeholder.com/150" />
+                {{ end }}
+              </div>
+              <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+                <div class="font-medium text-black">
+                  {{ .Title }}
+                </div>
+                <div class="text-gray-400 text-xs-s">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+            </a>
+            <!-- BLOCK 2 ENDS -->
+            {{ end }}
+            {{ else }}
+            <p>No popular tags found after the first one.</p>
+            {{ end }}
+            {{ else }}
+            <p>No popular tags available.</p>
+            {{ end }}
+          </div>
+
+        </div>
+      </div>
+      <!-- ***DONT MISS ENDS -->
+
+      <!-- <LifeStyle /> -->
+
+      <!-- ***PERFORMANCE STARTS -->
+      <!-- BLOCK PERFORMANCE -->
+      <div class="p-4 md:p-0 mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Don't Miss
+          </div>
+          <div class="flex flex-row"></div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+        {{ if .Site.Taxonomies.tags.nomiss }}
+        {{ $nomissTags := .Site.Taxonomies.tags.nomiss }}
+        {{ if gt (len $nomissTags) 0 }}
+        {{ range first 5 $nomissTags }}
+        <!-- BLOCK 4 STARTS -->
+        <a class="
+          flex flex-col
+          md:flex-row
+          px-2
+          md:px-0
+          pt-5
+          md:py-6
+          cursor-pointer
+        " href="{{ .RelPermalink }}">
+          <!-- Image  -->
+          <div class="w-full md:w-4/12">
+            {{ if (isset .Params "cover") }}
+            <img loading="lazy" class="object-cover" src="{{ .Params.cover }}" />
+            {{ else }}
+            <img loading="lazy" class="object-cover" src="https://via.placeholder.com/150" />
+            {{ end }}
+          </div>
+
+          <!-- Details  -->
+          <div class="
+            w-full
+            md:w-8/12
+            text-xl
+            px-0
+            md:px-5
+            py-6
+            md:py-0
+            flex flex-col
+            justify-between
+          ">
+            <div class="font-medium text-black cursor-pointer">
+              {{ .Title }}
+              <!-- Author + Date  -->
+              <div class="flex flex-row">
+                <!-- Author  -->
+                <div class="text-xs-s font-bold">
+                  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+                  {{ if $author }}
+                  {{ $author.name }}
+                  {{ else }}
+                  Default Author
+                  {{ end }}
+                </div>
+                <!-- Date  -->
+                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Description  -->
+            <div class="text-gray-600 text-xs">
+              {{ .Params.desc | default "No description available" | truncate 250 }}
+            </div>
+          </div>
+        </a>
+        <!-- BLOCK 4 ENDS -->
+        {{ end }}
+        {{ else }}
+        <p>No tags found in 'nomiss'.</p>
+        {{ end }}
+        {{ else }}
+        <p>No 'nomiss' taxonomy available.</p>
+        {{ end }}
+
+      </div>
+      <!-- ***PERFORMANCE ENDS -->
+
+      <!-- ***LATEST ARTICLES STARTS -->
+      <!-- BLOCK  -->
+      <div class="p-4 md:p-0 mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Editor Picks
+          </div>
+          <div class="flex flex-row"></div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <!-- Content  -->
+        <div class="flex flex-col md:flex-row flex-wrap">
+          {{ if .Site.Taxonomies.tags.editor }}
+          {{ $editorTags := .Site.Taxonomies.tags.editor }}
+          {{ if gt (len $editorTags) 0 }}
+          {{ range first 5 $editorTags }}
+          <a class="w-full md:w-1/2 p-1 md:pr-10 py-5 cursor-pointer" href="{{ .RelPermalink }}">
+            <!-- BLOCK 5 STARTS -->
+            <div class="bg-red- cursor-pointer">
+              <div class="relative">
+                <!-- Check for cover image -->
+                {{ if .Params.cover }}
+                <img loading="lazy" class="object-cover h-44 w-full" src="{{ .Params.cover }}" />
+                {{ else }}
+                <img loading="lazy" class=""
+                  src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                {{ end }}
+
+                <div class="
+              absolute
+              bottom-0
+              left-0
+              bg-{{ $.Site.Params.border }}
+              text-white text-xs-s
+              py-1
+              px-1.5
+              capitalize
+            ">
+                  <!-- Display categories if available -->
+                  {{ if (isset .Params "categories") }}
+                  <div>{{ index .Params.categories 0 }}</div>
+                  {{ else }}
+                  <div>Uncategorized</div>
+                  {{ end }}
+                </div>
+              </div>
+
+              <!-- Title -->
+              <div class="text-lg pt-2 font-medium text-black">
+                {{ .Title }}
+              </div>
+
+              <!-- Author + Date -->
+              <div class="flex flex-row pt-3">
+                <!-- Author -->
+                <div class="text-xs-s font-bold">
+                  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+                  {{ if $author }}
+                  {{ $author.name }}
+                  {{ else }}
+                  Default Author
+                  {{ end }}
+                </div>
+
+                <!-- Date -->
+                <div class="text-xs-s font-semibold text-gray-400 ml-4">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </div>
+            </div>
+            <!-- BLOCK 5 ENDS -->
+          </a>
+          {{ end }}
+          {{ else }}
+          <p>No tags found in 'editor'.</p>
+          {{ end }}
+          {{ else }}
+          <p>No 'editor' taxonomy available.</p>
+          {{ end }}
+
+        </div>
+      </div>
+      <!-- ***LATEST ARTICLES ENDS -->
+    </div>
+
+    <!-- RIGHT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-4/12 bg-yellow-">
+      {{ partial "stay_connected.html" . }}
+
+      <div class="w-full py-6">
+        <img loading="lazy" class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg" />
+      </div>
+
+      <!-- ***LATEST STARTS -->
+      <div class="p-4 md:p-0 mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Latest
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+            <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+            <div class="text-gray-400 text-xs mr-6">Vouge</div>
+            <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+            <div class="text-gray-400 text-xs mr-6">Travel</div>
+            <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+            <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <div class="flex flex-col md:flex-row flex-wrap pt-5 bg-red-">
+          {{ if .Site.Taxonomies.tags.latest }}
+          {{ $latestTags := .Site.Taxonomies.tags.latest }}
+          {{ if gt (len $latestTags) 0 }}
+          {{ range first 6 $latestTags }}
+          <a class="w-full md:w-1/2 p-2.5 cursor-pointer" href="{{ .RelPermalink }}">
+            <div>
+              <div class="relative">
+                <!-- Check if cover image exists -->
+                {{ if .Params.cover }}
+                <img loading="lazy" class="object-cover h-44 md:h-24 w-full" src="{{ .Params.cover }}" />
+                {{ else }}
+                <img loading="lazy" class="object-cover h-44 md:h-24 w-full"
+                  src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/11-696x464.jpg" />
+                {{ end }}
+
+                <div class="
+              absolute
+              bottom-0
+              left-0
+              bg-{{ $.Site.Params.border }}
+              text-white text-xs-s
+              py-1
+              px-1.5
+              capitalize
+            ">
+                  <!-- Check if categories exist -->
+                  {{ if (isset .Params "categories") }}
+                  <div>{{ index .Params.categories 0 }}</div>
+                  {{ else }}
+                  <div>Uncategorized</div>
+                  {{ end }}
+                </div>
+              </div>
+
+              <!-- Title -->
+              <div class="text-sm pt-2 font-medium text-black">
+                {{ .Title }}
+              </div>
+            </div>
+          </a>
+          {{ end }}
+          {{ else }}
+          <p>No tags found in 'latest'.</p>
+          {{ end }}
+          {{ else }}
+          <p>No 'latest' taxonomy available.</p>
+          {{ end }}
+
+        </div>
+      </div>
+      <!-- ***LATEST ENDS -->
+
+      <div class="w-full py-6">
+        <img loading="lazy" class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg" />
+      </div>
+
+      <!-- ***MOST POPULAR STARTS -->
+      <div class="p-4 md:p-0 mb-6">
+        <SubHeading text="most popular" color="black" />
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          ">
+          <div class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            ">
+            Trending Now
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+            <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+            <div class="text-gray-400 text-xs mr-6">Vouge</div>
+            <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+            <div class="text-gray-400 text-xs mr-6">Travel</div>
+            <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+            <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+
+        <div class="py-4">
+          {{ with .Site.Taxonomies.tags.trend }}
+          {{ range first 6 . }}
+          <a class="flex flex-row px-2 pt-5 cursor-pointer" href="{{ .RelPermalink }}">
+            <!-- Image  -->
+            <div class="w-4/12">
+              <img loading="lazy" class="object-cover h-16" src="{{ .Params.cover }}" />
+            </div>
+            <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+              <div class="font-medium text-black">{{ .Title | truncate 65 }}</div>
+              <div class="text-gray-400 text-xs-s">
+                {{ .Date | time.Format ":date_long" }}
+              </div>
+            </div>
+          </a>
+          {{ end }}
+          {{ end }}
+
+        </div>
+        <!-- ***MOST POPULAR ENDS -->
+
+        <!-- <RecentComments /> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MAIN GIANT COLUMN ENDS -->
+<!-- {{ .Content }} -->
+{{ end }}

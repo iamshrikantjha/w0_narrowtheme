@@ -1,0 +1,121 @@
+<!-- ***STAY CONNECTED STARTS -->
+<div class="p-4 md:p-0 mb-6">
+    <!-- SUBHEADING STARTS -->
+    <!-- Heading -->
+    <div class="
+          border-b-2 border-{{ $.Site.Params.border }}
+          flex flex-row
+          justify-between
+          items-center
+        ">
+      <div class="
+            bg-{{ $.Site.Params.border }}
+            inline-block
+            uppercase
+            text-sm
+            py-1.5
+            px-2
+            text-white
+          ">
+        STAY CONNECTED
+      </div>
+      <div class="flex flex-row">
+        <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+          <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+          <div class="text-gray-400 text-xs mr-6">Vouge</div>
+          <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+          <div class="text-gray-400 text-xs mr-6">Travel</div>
+          <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+          <div class="text-gray-400 text-xs mr-6">More</div> -->
+      </div>
+    </div>
+    <!-- SUBHEADING ENDS -->
+
+    <!-- Social Media Links  -->
+    <div class="flex flex-col">
+      <!-- 1  -->
+      <div class="
+            w-full
+            flex flex-row
+            justify-between
+            items-center
+            font-bold
+            text-xs
+            mt-5
+          ">
+        <div class="flex flex-row items-center">
+          <a  target="{{if .Site.Params.links.facebook}}_blank{{end}}" href="{{if .Site.Params.links.facebook}}{{ $.Site.Params.links.facebook }}{{end}}"
+          class="w-10
+                h-10
+                flex
+                justify-center
+                items-center
+                bg-blue-600
+              ">
+            <i class="text-lg text-white fab fa-facebook-f"></i>
+          </a>
+          <!-- <div class="pl-3">21, 800 Fans</div> -->
+          <div class="pl-3 uppercase cursor-pointer">Helping Hands</div>
+
+        </div>
+        <a target="{{if .Site.Params.links.facebook}}_blank{{end}}" href="{{if .Site.Params.links.facebook}}{{ $.Site.Params.links.facebook }}{{end}}" class="uppercase cursor-pointer">Like</a>
+      </div>
+
+      <!-- 2  -->
+      <div class="
+            w-full
+            flex flex-row
+            justify-between
+            items-center
+            font-bold
+            text-xs
+            mt-5
+          ">
+        <div class="flex flex-row items-center">
+          <a  target="{{if .Site.Params.links.twitter}}_blank{{end}}" href="{{if .Site.Params.links.twitter}}{{ $.Site.Params.links.twitter }}{{end}}" class="
+                w-10
+                h-10
+                flex
+                justify-center
+                items-center
+                bg-blue-500
+              ">
+            <i class="text-lg text-white fab fa-twitter"></i>
+          </a>
+          <!-- <div class="pl-3">21, 800 Followers</div> -->
+          <div class="pl-3 uppercase cursor-pointer">Crazy Tweets & Retweets</div>
+
+        </div>
+        <a target="{{if .Site.Params.links.twitter}}_blank{{end}}" href="{{if .Site.Params.links.twitter}}{{ $.Site.Params.links.twitter }}{{end}}" class="uppercase cursor-pointer">Follow</a>
+      </div>
+
+      <!-- 3  -->
+      <div class="
+            w-full
+            flex flex-row
+            justify-between
+            items-center
+            font-bold
+            text-xs
+            mt-5
+          ">
+        <div class="flex flex-row items-center">
+          <a target="{{if .Site.Params.links.youtube}}_blank{{end}}" href="{{if .Site.Params.links.youtube}}{{ $.Site.Params.links.youtube }}{{end}}" class="
+                w-10
+                h-10
+                flex
+                justify-center
+                items-center
+                bg-red-600
+              ">
+            <i class="text-lg text-white fab fab fa-youtube"></i>
+          </a>
+          <!-- <div class="pl-3">17,500 Subscribers</div> -->
+          <div class="pl-3 uppercase cursor-pointer">Weekly Shows & Podcasts</div>
+
+        </div>
+        <a  target="{{if .Site.Params.links.youtube}}_blank{{end}}" href="{{if .Site.Params.links.youtube}}{{ $.Site.Params.links.youtube }}{{end}}" class="uppercase cursor-pointer">Subscribe</a  target="{{if .Site.Params.links.facebook}}_blank{{end}}" href="{{if .Site.Params.links.facebook}}{{ $.Site.Params.links.facebook }}{{end}}">
+      </div>
+    </div>
+  </div>
+  <!-- ***STAY CONNECTED ENDS -->

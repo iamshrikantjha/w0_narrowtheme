@@ -1,0 +1,360 @@
+<header>
+    
+    <!-- BLACK BANNER STARTS-->
+    <div class="w-full bg-black hidden md:block">
+        <div class="w-full md:w-10/12 lg:w-7/12 mx-auto">
+            <div class="flex flex-row justify-between py-0.5">
+                <!-- Left  -->
+                <div class="flex flex-row items-center">
+                    <div class="mr-1 text-xs-s text-white cursor-pointer font-semibold">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="
+                mr-5
+                text-xs-s text-white
+                cursor-pointer
+                tracking-widest
+                font-semibold
+              ">
+                        <!-- 8.7<sup>c</sup> New York -->
+                    </div>
+                    <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+                        <!-- Friday, April 23, 2021 -->
+                        <span id='date-time'></span>
+                    </div>
+                    <!-- <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+                        Sign in / Join
+                    </div>
+                    <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+                        Blog
+                    </div>
+                    <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+                        Forum
+                    </div>
+                    <div class="mr-5 text-xs-s text-white cursor-pointer tracking-widest">
+                        Buy now!
+                    </div> -->
+                </div>
+
+                <!-- Right  -->
+                <div class="flex flex-row items-center">
+                  <!-- FACEBOOK LINK -->
+                    <a target="{{if .Site.Params.links.facebook}}_blank{{end}}" href="{{if .Site.Params.links.facebook}}{{ $.Site.Params.links.facebook }}{{end}}">
+                    <i class="
+                  fab
+                  fa-facebook-f
+                  text-white
+                  cursor-pointer
+                  hover:text-blue-500
+                  text-xs
+                  mr-5
+                    "></i>
+                    </a>
+                    <a target="{{if .Site.Params.links.instagram}}_blank{{end}}" href="{{if .Site.Params.links.instagram}}{{ $.Site.Params.links.instagram }}{{end}}">
+                        <i class="
+                  fab
+                  fa-instagram
+                  text-white
+                  cursor-pointer
+                  hover:text-yellow-500
+                  text-xs
+                  mr-5
+                "></i>
+                    </a>
+                    <a target="{{if .Site.Params.links.twitter}}_blank{{end}}" href="{{if .Site.Params.links.twitter}}{{ $.Site.Params.links.twitter }}{{end}}">
+                        <i class="
+                  fab
+                  fa-twitter
+                  text-white
+                  cursor-pointer
+                  hover:text-blue-500
+                  text-xs
+                  mr-5
+                "></i>
+                    </a>
+                    <a target="{{if .Site.Params.links.youtube}}_blank{{end}}" href="{{if .Site.Params.links.youtube}}{{ $.Site.Params.links.youtube }}{{end}}">
+                        <i class="
+                  fab
+                  fa-youtube
+                  text-white
+                  cursor-pointer
+                  hover:text-red-500
+                  text-xs
+                  mr-5
+                "></i>
+                    </a>
+                    <a target="{{if .Site.Params.links.vimeo}}_blank{{end}}" href="{{if .Site.Params.links.vimeo}}{{ $.Site.Params.links.vimeo }}{{end}}">
+                        <i class="
+                  fab
+                  fa-vimeo-v
+                  text-white
+                  cursor-pointer
+                  hover:text-green-500
+                  text-xs
+                "></i>
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BLACK BANNER ENDS -->
+
+    <!-- BANNER STARTS 2   -->
+    <div class="w-full md:w-10/12 mx-auto hidden md:block">
+        <div class="flex flex-row justify-center items-center">
+           <!-- L  -->
+          <!-- <div class="flex flex-row items-center">
+            <div>
+              <i class="fas fa-cloud-moon-rain"></i>
+            </div>
+            <div class="gel text-sm px-1 font-bold">
+              -0.9 <sup class="gel text-sm">c</sup>
+            </div>
+            <div class="gel text-sm font-semibold">Agra</div>
+          </div> -->
+           <!-- C  -->
+          <div class="flex flex-col justify-center items-center my-9">
+             <!-- TITLE  -->
+             <!-- notranslate  -->
+            <div class="text-6xl gel font-semibold uppercase tracking-widest">
+              <span class="text-{{ $.Site.Params.color }}-700 gel">{{ $.Site.Params.firstname }}</span>{{if .Site.Params.lastname}}{{ $.Site.Params.lastname }}{{end}}
+              <!-- 🔮 -->
+            </div>
+            <div class="text-sm cf"><span class="text-sm cf" id='date-time'></span></div>
+          </div>
+           <!-- R  -->
+          <div class=" flex flex-row items-center">
+            <!-- <div>
+              <i class="fab fa-facebook cursor-pointer text-lg pl-4 hover:text-blue-600"></i>
+            </div>
+            <div>
+              <i class="fab fa-youtube cursor-pointer text-lg pl-4 hover:text-red-500"></i>
+            </div>
+            <div>
+              <i class="fab fa-twitter cursor-pointer text-lg pl-4 hover:text-blue-500"></i>
+            </div>
+
+            <div>
+              <i class="fab fa-instagram cursor-pointer text-lg pl-4 hover:text-purple-700"></i>
+            </div> -->
+          </div>
+        </div>
+    </div>
+    <!-- BANNER ENDS 2   -->
+
+    <!-- BANNER STARTS -->
+    <!-- <div class="w-full bg-red-  hidden md:block">
+        <div class="
+          w-full
+          md:w-10/12
+          lg:w-7/12
+          mx-auto
+          flex flex-row
+          items-center
+          justify-between
+          bg-green-
+          py-8
+        ">
+            <div class="w-3/12">
+                <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/09/np10blue-retina.png" />
+            </div>
+
+            <div class="">
+                <img loading="lazy" src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec728.jpg" />
+            </div>
+        </div>
+    </div> -->
+    <!-- BANNER ENDS -->
+
+    <!-- NAVBAR STARTS -->
+    <div class="w-full bg-red- shadow-lg hidden md:block">
+        <div class="md:w-10/12 lg:w-7/12 mx-auto bg-green- flex flex-row">
+            <!-- List -->
+            <a href="/" class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-blue-500
+          ">All ❤️</a>
+            <a href="/posts" class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Latest 🏷️</a>
+            <a href="/categories" class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Categories ✨</a>
+            <a href="/tags" 
+            class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-blue-500
+          ">Tags 🔥</a>
+          <a href="/series/" class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Series 📲</a>
+            <a href="/archive/" class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Archive 📁</a>
+          <a href="/contact/"  class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Contact Us 💧</a>
+            <!-- <a class="
+            uppercase
+            mr-6
+            py-2.5
+            text-sm
+            font-semibold
+            cursor-pointer
+            border-b-4 border-white
+            hover:border-blue-500
+          ">Search 🔎</a> -->
+          <!-- <a class="
+          uppercase
+          mr-6
+          py-2.5
+          text-sm
+          font-semibold
+          cursor-pointer
+          border-b-4 border-white
+          hover:border-blue-500
+        ">Videos 🎬</a> -->
+        </div>
+    </div>
+    <!-- NAVBAR ENDS -->
+
+     <!-- MOBILE TOP NAVBAR STARTS -->
+     <div class="fixed top-0 block md:hidden z-50">
+        <div class="w-screen bg-black flex flex-row py-2 opacity-90 navigation-menu">
+            <!-- 1 -->
+            <!-- <a class="text-2xl text-white  self-start pl-3" href="/" >
+                &#9776
+            </a> -->
+            <label class="fas fa-bars text-white text-xl self-start pl-3"  for="menu-toggle"></label>
+           
+            <!-- 1 -->
+            <a class="text-xl text-white font-bold uppercase mx-auto cf" href="/" >
+          <!-- <span class="text-teal-600">Tantra</span> <span class="notranslate">🔥 </span>Media -->
+          {{ $.Site.Params.firstname }} <span class="notranslate">🔥 </span> <span class="text-{{ $.Site.Params.color }}-600">{{if .Site.Params.lastname}}{{ $.Site.Params.lastname }}{{end}}</span>
+            </a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+      <div class="main-navigation flex flex-1">
+        <div class="w-screen h-screen bg-black flex flex-col items-center py-6 opacity-90">
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/" >
+                 Home <span class="notranslate"></span>🏠
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/posts/" >
+                 Latest Posts <span class="notranslate">🔥</span>
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/series/" >
+                 Series <span class="notranslate">📲</span>
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/archive/" >
+                 Archive <span class="notranslate">📁</span>
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/categories/" >
+                 Categories <span class="notranslate"> ✨</span>
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/tags/" >
+                Tags <span class="notranslate">🏷️</span>  
+            </a>
+            <!-- 1 -->
+            <a class="text-md font-bold my-4 text-white cf" href="/contact/" >
+                Contact Us <span class="notranslate">💧</span>  
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="invisible md:hidden z-50">
+      <div class="w-screen bg-black flex flex-row py-2 opacity-90 navigation-menu">
+        <!-- 1 -->
+        <!-- <a class="text-2xl text-white  self-start pl-3" href="/" >
+            &#9776
+        </a> -->
+        <label class="fas fa-bars text-white text-xl self-start pl-3"  for="menu-toggle"></label>
+       
+        <!-- 1 -->
+        <a class="text-xl text-white font-bold uppercase mx-auto cf" href="/" >
+          <span class="text-{{ $.Site.Params.color }}-600">{{ $.Site.Params.firstname }}</span> <span class="notranslate">🔥 </span>{{if .Site.Params.lastname}}{{ $.Site.Params.lastname }}{{end}}
+        </a>
+    </div>
+    </div>
+    <!-- MOBILE TOP NAVBAR ENDS -->
+
+
+
+    <!-- MOBILE BOTTOM NAVBAR STARTS -->
+    <div class="fixed bottom-0 block md:hidden z-50 notranslate">
+        <div class="w-screen bg-black flex flex-row justify-evenly py-2 opacity-90">
+            <!-- 1 -->
+            <a class="text-2xl" href="/" >
+                🏠
+            </a>
+            <!-- 1 -->
+            <a class="text-2xl" href="/posts/" >
+                🔥
+            </a>
+            <!-- 1 -->
+            <a class="text-2xl" href="/archive/" >
+                📁
+            </a>
+            <!-- 1 -->
+            <a class="text-2xl" href="/tags/" >
+                🏷️
+            </a>
+            <!-- 1 -->
+            <a class="text-2xl" href="/categories/" >
+                ✨
+            </a>
+        </div>
+    </div>
+    <!-- MOBILE BOTTOM NAVBAR ENDS -->
+
+</header>

@@ -1,0 +1,231 @@
+{{ define "main" }}
+
+  <!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL STARTS -->
+  <!-- Overlay  -->
+  <div class="w-full flex flex-row items-center justify-center pt-6">
+    <div class="w-11/12 md:w-7/12 mx-auto">
+      <!-- Title  -->
+      <div class="text-3xl uppercase font-bold text-black">{{ .Title }}</div>
+
+      {{ partial "tags.html" . }}
+
+    </div>
+  </div>
+  <!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL ENDS --> 
+
+  <!-- MAIN GIANT COLUMN STARTS -->
+  <div class="w-full bg-green- my-2 md:my-10">
+
+    <div class="
+          w-full
+          md:w-10/12
+          lg:w-7/12
+          mx-auto
+          bg-red-
+          flex flex-col
+          md:flex-row
+        ">
+      <!-- LEFT HAND SECTION OF WELCOME PAGE  -->
+      <div class="w-full md:w-8/12 bg-blue- md:mr-10 ">
+
+        <!-- LATEST NEWS START -->
+        <!-- BLOCK  -->
+        <div class="p-4 md:p-0 mb-0 md:mb-6">
+          <!-- SUBHEADING STARTS -->
+          <!-- Heading -->
+          <div class="
+                border-b-2 border-{{ $.Site.Params.border }}
+                flex flex-row
+                justify-between
+                items-center
+              ">
+            <div class="
+                  bg-{{ $.Site.Params.border }}
+                  inline-block
+                  uppercase
+                  text-sm
+                  py-1.5
+                  px-2
+                  text-white
+                ">
+              <!-- Latest News -->
+              <!-- {{ .Title }} -->
+              404
+            </div>
+            <div class="flex flex-row">
+              <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+            </div>
+          </div>
+          <!-- SUBHEADING ENDS -->
+
+
+            <!-- HANDLE 404 HERE STARTS -->
+            <!-- <main id="main">
+              <div>
+               <h1 id="title"><a href="{{ "/" | relURL }}">404...Go Home</a></h1>
+              </div>
+            </main> -->
+            <section class="page_404">
+              <div class="container">
+                <div class="row">	
+                <div class="col-sm-12 ">
+                <div class="col-sm-10 col-sm-offset-1  text-center">
+                <div class="four_zero_four_bg">
+                  <h1 class="text-center ">404</h1>
+                
+                
+                </div>
+                
+                <div class="contant_box_404">
+                <h3 class="h2">
+                Look like you're lost
+                </h3>
+                
+                <p>the page you are looking for is not avaible!</p>
+                
+                <a href="{{ "/" | relURL }}" class="link_404 bg-{{ $.Site.Params.color }}-600">Go to Home</a>
+              </div>
+                </div>
+                </div>
+                </div>
+              </div>
+            </section>
+            <!-- HANDLE 404 HERE ENDS -->
+
+
+          
+           </div>
+        <!-- LATEST NEWS ENDS -->
+        
+        <!-- GOOGLE TRANSLATE STARTS -->
+        <div class="w-full px-4 md:px-0 inline-block mx-auto">
+          <div id="google_translate_element"></div>
+        </div>
+        <!-- GOOGLE TRANSLATE ENDS -->
+      
+      </div>
+
+      <!-- RIGHT HAND SECTION OF WELCOME PAGE  -->
+    <div class="w-full md:w-4/12 bg-yellow-">
+      <!-- AUTHOR STARTS -->
+      <div class="w-full flex flex-col justify-center">
+        <!-- Author Image  -->
+        {{ $author := index .Site.Data.authors (.Params.author | default
+        "default") }} {{- if $author -}}
+        <img loading="lazy"
+          class="mx-auto object-cover rounded-full  h-44 w-44 md:h-36 md:w-36 lg:w-44 lg:h-44"
+          src="{{ $author.avatar }}"
+        />
+
+        {{- end -}}
+        <!-- <img loading="lazy"
+          class="mx-auto object-cover rounded-full w-6/12 md:w-6/12 h-44 w-44"
+          src="{{ $.Site.Params.aurl }}"
+          /> -->
+
+        <!-- Author Name  -->
+        <div
+          class="text-center pt-4 text-lg text-black font-semibold uppercase"
+        >
+          <!-- amir vans -->
+          {{ $author := index .Site.Data.authors (.Params.author | default
+          "default") }} {{- if $author -}} {{ $author.name }} {{- end -}}
+        </div>
+
+        <!-- About Author  -->
+        <div class="text-center py-4 px-6 md:px-0 text-sm text-gray-500">
+          {{ $author := index .Site.Data.authors (.Params.author | default
+          "default") }} {{- if $author -}} {{ $author.bio }} {{- end -}}
+          <!-- {{ $.Site.Params.description }} -->
+          <!-- Nisi elit exercitation qui tempor voluptate veniam ut sint amet.
+          Cillum voluptate veniam sint deserunt sit et anim non. Reprehenderit
+          aliquip dolor sit sit. Eiusmod cupidatat consectetur velit proident. -->
+        </div>
+      </div>
+      <!-- AUTHOR ENDS -->
+
+      <!-- STAY CONNECTED STARTS -->
+      <!-- STAY CONNECTED ENDS -->
+
+      <div class="w-full py-6">
+        <img loading="lazy"
+          class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg"
+        />
+      </div>
+
+      <!-- MOST POPULAR STARTS -->
+      <!-- BLOCK -->
+      <div class="p-4 md:p-0 mb-6">
+        <!-- SUBHEADING STARTS -->
+        <!-- Heading -->
+        <div
+          class="
+            border-b-2 border-{{ $.Site.Params.border }}
+            flex flex-row
+            justify-between
+            items-center
+          "
+        >
+          <div
+            class="
+              bg-{{ $.Site.Params.border }}
+              inline-block
+              uppercase
+              text-sm
+              py-1.5
+              px-2
+              text-white
+            "
+          >
+            Related Articles
+          </div>
+          <div class="flex flex-row">
+            <!-- <div class="text-gray-400 text-xs mr-6">All</div>
+                <div class="text-gray-400 text-xs mr-6">Style Hunter</div>
+                <div class="text-gray-400 text-xs mr-6">Vouge</div>
+                <div class="text-gray-400 text-xs mr-6">Health & Fitness</div>
+                <div class="text-gray-400 text-xs mr-6">Travel</div>
+                <div class="text-gray-400 text-xs mr-6">Gadgets</div>
+                <div class="text-gray-400 text-xs mr-6">More</div> -->
+          </div>
+        </div>
+        <!-- SUBHEADING ENDS -->
+        <div class="py-3 md:py-4 bg-red-">
+          {{ partial "related.html" . }} {{ $pages := where .Site.RegularPages
+          "CurrentSection.Title" .CurrentSection.Title }} {{ range first 1
+          (after 3 $pages) }}
+          <!-- BLOCK 2 STARTS -->
+          <a class="flex flex-row px-0 md:px-2 pt-5" href="{{ .RelPermalink }}">
+            <!-- Image -->
+            <div class="w-4/12">
+              <img loading="lazy" class="h-20 object-cover w-full" src="{{ .Params.cover }}" />
+            </div>
+            <div class="w-8/12 text-sm px-4 flex flex-col justify-between">
+              <div class="font-medium text-black">
+                <!-- Spring Fashion Show at the University of Michigan Has Started -->
+                {{ .Title }}
+              </div>
+              <div class="text-gray-400 text-xs-s">
+                {{ .Date | time.Format ":date_long" }}
+              </div>
+            </div>
+          </a>
+          <!-- BLOCK 2 ENDS -->
+          {{ end }}
+        </div>
+      </div>
+      <!-- MOST POPULAR ENDS -->
+
+      <!-- <RecentComments /> -->
+    </div>
+    </div>
+  </div>
+  <!-- MAIN GIANT COLUMN ENDS -->
+{{ end }}
