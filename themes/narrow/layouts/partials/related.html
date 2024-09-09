@@ -7,7 +7,7 @@
 	<a class="flex flex-row px-0 md:px-2 pt-5 cursor-pointer" href="{{ .RelPermalink }}">
 		<!-- Image -->
 		<div class="w-4/12">
-		  <img loading="lazy" class="h-20 object-cover w-full" src="{{ .Params.cover }}" />
+		  <img loading="lazy" class="h-20 object-cover w-full" src="{{ .Permalink }}{{ .Params.cover }}" />
 		</div>
 		<div class="w-8/12 text-sm px-4 flex flex-col justify-between">
 		  <div class="font-medium text-black">

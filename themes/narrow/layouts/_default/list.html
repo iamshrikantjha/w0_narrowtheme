@@ -12,7 +12,10 @@
 </div>
 <!-- BLOGS HEADER LIST TEMPLATE TITLE OR LABEL ENDS -->
 
-
+<!-- EXPERIMENT
+  {{ range first 3 .Site.Taxonomies.tags.popular }}
+    <div>{{ .Params.cover }}</div>
+  {{ end }} -->
 
 <!-- MAIN GIANT COLUMN STARTS -->
 <div class="w-full bg-green- my-10">
@@ -148,7 +151,7 @@
                 {{ else }}
                 <img loading="lazy"
                   class="h-44 object-cover w-full bg-red-"
-                  src="{{ .Params.cover }}"
+                  src="{{ .Permalink }}{{ .Params.cover }}"
                 />
 
                 {{ end }}

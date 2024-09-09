@@ -11,6 +11,24 @@ desc: "Bloggers are soulless, purposeless people who can’t find anything bette
 
 {{ replace .Name "-" " " | title }}
 
-Quis consequat non laboris eiusmod quis proident nostrud eiusmod officia enim qui cillum ut. Sint aliqua sint ut eiusmod deserunt eiusmod ut minim cillum Lorem quis anim. Consectetur aliqua culpa non qui officia. Do culpa magna excepteur in pariatur commodo id sunt non quis anim cillum. Mollit excepteur occaecat elit occaecat.
+******HOW TO WRITE BLOG******
 
-Esse cupidatat nostrud anim ipsum incididunt ad laboris consectetur occaecat nostrud cupidatat. Eiusmod voluptate adipisicing in Lorem deserunt ullamco culpa exercitation velit do. Lorem elit amet sint do dolor exercitation officia sint Lorem dolor ipsum. Sint qui Lorem cupidatat eu fugiat id ad. Non et ea do aliquip culpa. Ex incididunt dolore ullamco officia id consectetur deserunt. In consectetur laborum deserunt laboris aliqua.
+1. Headings
+# heading 1
+## heading 2
+### heading 3
+#### heading 4
+##### heading 5
+###### heading 6
+
+2. Youtube Video
+## Youtube Shortcode
+
+{{< youtube CFEkjzf8DAA >}}
+
+3. Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Elon Image](/images/elon_musk/1.jpeg)
+

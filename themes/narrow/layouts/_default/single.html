@@ -3,7 +3,7 @@
 <div class="w-full bg-green- my-10">
   <!-- Tags + Title  -->
   <div class="w-11/12 md:w-10/12 lg:w-7/12 mx-auto">
-   
+
 
     <div class="text-3xl md:text-5xl tracking-wider font-semibold my-8">
       <!-- Fashion Outfit Ideas From the Biggest Instagram Influencers -->
@@ -11,8 +11,7 @@
     </div>
   </div>
 
-  <div
-    class="
+  <div class="
       w-full
       md:w-10/12
       lg:w-7/12
@@ -20,8 +19,7 @@
       bg-red-
       flex flex-col
       md:flex-row
-    "
-  >
+    ">
     <!-- LEFT HAND SECTION OF WELCOME PAGE  -->
     <div class="w-full md:w-8/12 bg-blue- md:mr-10">
       {{ partial "breadcrumbs.html" . }}
@@ -34,10 +32,7 @@
             <div>
               {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
               {{- if $author -}}
-              <img loading="lazy"
-                class="w-10 h-10 object-cover mr-3 rounded-full"
-                src="{{ $author.avatar }}"
-              />
+              <img loading="lazy" class="w-10 h-10 object-cover mr-3 rounded-full" src="{{ $author.avatar }}" />
               {{- end -}}
               <!-- <img loading="lazy"
                 class="w-10 h-10 object-cover mr-3 rounded-full"
@@ -48,7 +43,7 @@
               <!-- amir vans -->
               {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
               {{- if $author -}}
-                  {{ $author.name }}
+              {{ $author.name }}
               {{- end -}}
               <!-- {{ $.Site.Params.author }} -->
             </div>
@@ -72,17 +67,14 @@
       <!-- BLOG CONTENT STARTS -->
       <div class="my-10 px-3 md:px-0 text-">
         <!-- Image  -->
-        <img loading="lazy"
-         class="h-full md:h-96 object-cover w-full" 
-         src="{{ .Params.cover }}"
-        />
+        <img loading="lazy" class="h-full md:h-96 object-cover w-full" src="{{ .Params.cover }}" />
 
 
 
         <!-- Blog Social  -->
         <!-- <BlogSocial /> -->
-        
-       
+
+
 
         <article class="prose mt-6 text-gray-700 text-md md:text-lg">
           <!-- TABLE OF CONTENT STARTS -->
@@ -96,48 +88,46 @@
 
           {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
 
-          
+
         </article>
 
 
-        
+
         <!-- TAGS & CATEGORIES BELONGS TO PARTICULAR GROUP STARTS -->
         <div class="tags-list mt-6">
           {{- with .Params.tags -}}
-              {{- if ge (len .) 1 -}}
-                  {{- range . -}}
-                      <a class="font-bold text-xl text-blue-600" href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>
-                  {{ end -}}
-              {{- end -}}
+          {{- if ge (len .) 1 -}}
+          {{- range . -}}
+          <a class="font-bold text-xl text-blue-600" href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>
+          {{ end -}}
+          {{- end -}}
           {{- end -}}
         </div>
 
         <div class="tags-list mt-3">
           {{- with .Params.categories -}}
-              {{- if ge (len .) 1 -}}
-                  {{- range . -}}
-                      <a 
-                      class="inline-block bg-{{ $.Site.Params.border }} py-1.5 px-2.5 my-1.5 cursor-pointer uppercase text-white text-sm tracking-wider mr-3"
-
-                      href="{{ $.Site.BaseURL }}/categories/{{ . | urlize }}/">{{ . }}</a>
-                  {{ end -}}
-              {{- end -}}
+          {{- if ge (len .) 1 -}}
+          {{- range . -}}
+          <a class="inline-block bg-{{ $.Site.Params.border }} py-1.5 px-2.5 my-1.5 cursor-pointer uppercase text-white text-sm tracking-wider mr-3"
+            href="{{ $.Site.BaseURL }}/categories/{{ . | urlize }}/">{{ . }}</a>
+          {{ end -}}
+          {{- end -}}
           {{- end -}}
         </div>
         <!-- TAGS & CATEGORIES BELONGS TO PARTICULAR GROUP ENDS -->
 
         <!-- BLOG TAGS STARTS -->
-       <div class="mt-3">
-        {{ partial "tags.html" . }}
-       </div>
-       <!-- BLOG TAGS ENDS -->
-       
+        <div class="mt-3">
+          {{ partial "tags.html" . }}
+        </div>
+        <!-- BLOG TAGS ENDS -->
+
       </div>
       <!-- BLOG CONTENT ENDS -->
       {{ partial "share_post.html" . }}
 
-       
-              
+
+
       <!-- GOOGLE TRANSLATE STARTS -->
       <div class="w-full px-4 md:px-0 mb-4 inline-block mx-auto bg-red-300">
         <div id="google_translate_element"></div>
@@ -151,26 +141,27 @@
         {{ template "_internal/disqus.html" . }}
         <!-- <h1>COMMENT ENDS</h1> -->
       </div>
-      
-      
+
+
       <!-- PREVIOUS AND NEXT PAGES STARTS -->
       {{ if or .Next .Prev }}
       <div class="border-t-2 border-b-2 border-gray-200 mb-12 py-6 flex flex-col md:flex-row justify-between">
-        
+
         <!-- Left -->
         {{ if .Prev }}
-        <a class="flex flex-1 flex-col cursor-pointer px-3 md:px-0"  href="{{ .Prev.Permalink | relURL}}">
+        <a class="flex flex-1 flex-col cursor-pointer px-3 md:px-0" href="{{ .Prev.Permalink | relURL}}">
           <div class="text-xs mb-1">PREVIOUS ARTICLE</div>
           <div class="font-bold text-gray-800 hover:text-blue-600">{{ .Prev.Title | markdownify }}</div>
         </a>
         {{ end }}
         <div class="border-2 my-6 block md:hidden"></div>
-        
+
         <!-- Right -->
         {{ if .Next }}
-        <a class="flex flex-1 flex-col cursor-pointer px-3 md:px-0"  href="{{ .Next.Permalink | relURL}}">
+        <a class="flex flex-1 flex-col cursor-pointer px-3 md:px-0" href="{{ .Next.Permalink | relURL}}">
           <div class="text-xs mb-1 self-end">NEXT ARTICLE</div>
-          <div class="self-end font-bold text-gray-800 hover:text-blue-600 text-right">{{ .Next.Title | markdownify }}</div>
+          <div class="self-end font-bold text-gray-800 hover:text-blue-600 text-right">{{ .Next.Title | markdownify }}
+          </div>
         </a>
         {{ end }}
 
@@ -178,22 +169,19 @@
       {{ end }}
       <!-- PREVIOUS AND NEXT PAGES ENDS -->
 
-      
-    
+
+
 
       <!-- RELATED ARTICLES STARTS -->
       <div class="p-4 md:p-0 mb-6">
         <!-- Heading -->
-        <div
-          class="
+        <div class="
             border-b-2 border-{{ $.Site.Params.border }}
             flex flex-row
             justify-between
             items-center
-          "
-        >
-          <div
-            class="
+          ">
+          <div class="
               bg-{{ $.Site.Params.border }}
               inline-block
               uppercase
@@ -201,8 +189,7 @@
               py-1.5
               px-2
               text-white
-            "
-          >
+            ">
             Latest Articles
           </div>
           <div class="flex flex-row">
@@ -217,14 +204,14 @@
         </div>
 
         <div class="flex flex-col md:flex-row justify-between">
-          {{ $pages := where .Site.RegularPages "CurrentSection.Title" .CurrentSection.Title }} {{ range first 3 $pages }}
+          {{ $pages := where .Site.RegularPages "CurrentSection.Title" .CurrentSection.Title }} {{ range first 3 $pages
+          }}
           <!-- BLOCK 5 STARTS -->
           <div class="p-3 w-full md:w-4/12 bg-red-">
-            <a class="bg-red- cursor-pointer"  href="{{ .RelPermalink }}">
+            <a class="bg-red- cursor-pointer" href="{{ .RelPermalink }}">
               <div class="relative">
-                <img loading="lazy" class="object-cover h-36 w-full" src="{{ .Params.cover }}" />
-                <div
-                  class="
+                <img loading="lazy" class="object-cover h-36 w-full" src="{{ .Permalink }}{{ .Params.cover }}" />
+                <div class="
                     absolute
                     bottom-0
                     left-0
@@ -233,17 +220,16 @@
                     py-1
                     px-1.5
                     capitalize
-                  "
-                >
-                   <!-- New Looks Starts-->
-                   {{ if (not (isset .Params "categories")) }}
-                   <!-- New Looks -->
-                     {{ else }}
-                     <div>
-                 {{ index .Params.categories 0 }}
-               </div>
-                 {{ end }}
-                 <!-- New Looks Ends-->
+                  ">
+                  <!-- New Looks Starts-->
+                  {{ if (not (isset .Params "categories")) }}
+                  <!-- New Looks -->
+                  {{ else }}
+                  <div>
+                    {{ index .Params.categories 0 }}
+                  </div>
+                  {{ end }}
+                  <!-- New Looks Ends-->
                 </div>
               </div>
               <div class="text-sm pt-2 font-medium text-black">
@@ -260,7 +246,7 @@
                   <!-- {{ $.Site.Params.author }} -->
                   {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
                   {{- if $author -}}
-                      {{ $author.name }}
+                  {{ $author.name }}
                   {{- end -}}
                 </div>
                 <!-- Date  -->
@@ -288,36 +274,32 @@
       <div class="w-full flex flex-col justify-center">
         <!-- Author Image  -->
         {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
-{{- if $author -}}
-<img loading="lazy"
-          class="mx-auto object-cover rounded-full h-44 w-44 md:h-36 md:w-36 lg:w-44 lg:h-44"
-          src="{{ $author.avatar }}"
-          />
-    
-{{- end -}}
+        {{- if $author -}}
+        <img loading="lazy" class="mx-auto object-cover rounded-full h-44 w-44 md:h-36 md:w-36 lg:w-44 lg:h-44"
+          src="{{ $author.avatar }}" />
+
+        {{- end -}}
         <!-- <img loading="lazy"
           class="mx-auto object-cover rounded-full w-6/12 md:w-6/12 h-44 w-44"
           src="{{ $.Site.Params.aurl }}"
           /> -->
 
         <!-- Author Name  -->
-        <div
-          class="text-center pt-4 text-lg text-black font-semibold uppercase"
-        >
+        <div class="text-center pt-4 text-lg text-black font-semibold uppercase">
           <!-- Pushpendra Kulshreshtha  -->
           <!-- amir vans -->
           {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
-{{- if $author -}}
-    {{ $author.name }}
-{{- end -}}
+          {{- if $author -}}
+          {{ $author.name }}
+          {{- end -}}
         </div>
 
         <!-- About Author  -->
         <div class="text-center py-4 px-6 md:px-0 text-sm text-gray-500">
           {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
-{{- if $author -}}
-    {{ $author.bio }}
-{{- end -}}
+          {{- if $author -}}
+          {{ $author.bio }}
+          {{- end -}}
           <!-- {{ $.Site.Params.description }} -->
           <!-- Nisi elit exercitation qui tempor voluptate veniam ut sint amet.
           Cillum voluptate veniam sint deserunt sit et anim non. Reprehenderit
@@ -330,10 +312,8 @@
       <!-- STAY CONNECTED ENDS -->
 
       <div class="w-full py-6">
-        <img loading="lazy"
-          class="mx-auto"
-          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg"
-        />
+        <img loading="lazy" class="mx-auto"
+          src="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/newspaper-rec300c.jpg" />
       </div>
 
       <!-- MOST POPULAR STARTS -->
@@ -341,16 +321,13 @@
       <div class="p-4 md:p-0 mb-6">
         <!-- SUBHEADING STARTS -->
         <!-- Heading -->
-        <div
-          class="
+        <div class="
             border-b-2 border-{{ $.Site.Params.border }}
             flex flex-row
             justify-between
             items-center
-          "
-        >
-          <div
-            class="
+          ">
+          <div class="
               bg-{{ $.Site.Params.border }}
               inline-block
               uppercase
@@ -358,8 +335,7 @@
               py-1.5
               px-2
               text-white
-            "
-          >
+            ">
             Related Articles
           </div>
           <div class="flex flex-row">
@@ -374,10 +350,11 @@
         </div>
         <!-- SUBHEADING ENDS -->
         <div class="py-3 md:py-4 bg-red-">
-          {{ partial "related.html" . }} 
-          
-          
-          {{ $pages := where .Site.RegularPages "CurrentSection.Title" .CurrentSection.Title }} {{ range first 1 (after 3 $pages) }}
+          {{ partial "related.html" . }}
+
+
+          {{ $pages := where .Site.RegularPages "CurrentSection.Title" .CurrentSection.Title }} {{ range first 1 (after
+          3 $pages) }}
           <!-- BLOCK 2 STARTS -->
           <a class="flex flex-row px-0 md:px-2 pt-5" href="{{ .RelPermalink }}">
             <!-- Image -->
